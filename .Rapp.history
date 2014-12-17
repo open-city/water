@@ -1,0 +1,228 @@
+install.packages("rattle")
+library(rattle)
+rattle()
+library(rattle)
+rattle
+rattleinfo()
+install.packages("RGtk2")
+library(RGtk2)
+library(rattle)
+rattle()
+libray(rattle)
+libray("rattle")
+libary(rattle)
+intall.packages("RGtk2")
+rattle()
+crv$rattleUI <-"rattle_macosx.ui"
+library(RGtk2)
+rattle()
+library(rattle)
+rattle()
+system.file("csv", "weather.csv", package="rattle")
+fn <- system.file("csv", "weather.csv", package="rattle")
+file.show(fn)
+head(crs$dataset[1:5,6])
+head(crs$dataset[1:5, 6])
+file.show(fn)
+head(crs$dataset[1])
+head(crs$dataset[1:5, 6])
+head(crs$dataset[1:5],6)
+library(himisc)
+library(hmisc)
+library(Hmisc)
+describe(weather[7])
+file.show(fn)
+describe(weather[7])
+library(describe)
+library(Hmisc)
+library(rattle)
+rattle()
+library(Hmisc)
+install.packages("Hmisc", dependencies=TRUE)
+library(Hmisc)
+describe(weather[7])
+describe(weather[8])
+basicStats()
+library(basicStats)
+install.packages("basicStats"), dependencies=TRUE)
+install.packages("fBasics"), dependencies=TRUE)
+install.package("fBasics"), dependencies=TRUE)
+library(fBasics)
+basicStats(weather$sunshine)
+basicStats(weather$Sunshine)
+skewness(weather[,c(7,9,12,13), na.rm=true])
+skewness(weather[,c(7,9,12,13), na.rm=TRUE])
+kurtosis(weather[,c(7,9,12,13), na.rm=true])
+library(mice)
+md.pattern(weather[,7:10])
+vars <- c(5,6,7,9,15)
+cor(weather[vars], use="pairwise", method ="pearson")
+pairs(weather[vars])
+numerics <- c(3:7, 9, 12:21)
+cc <- cor(weather[numerics],)
+cc <- cor(weather[numerics],
+use="pairwise",
+method="pearson")
+hc ,- hclust(dist(cc), method="average")
+hc <- hclust(dist(cc), method="average")
+dn <- as.dendrogram(hc)
+plot(dn, horz = TRUE)
+plot(dn, horiz = TRUE)
+library(rattle)
+rattle()
+library(latticist)
+library(package = latticist)
+library(latticist)
+install.packages(latticist)
+load("/Users/AlanRandolph1/Downloads/lattice/help/aliases.rds")
+load("/Users/AlanRandolph1/Downloads/lattice/help/paths.rds")
+library(latticist)
+library(lattice)
+lattice(weather)
+latticist(weather)
+library(latticist)
+local({#
+    info <- loadingNamespaceInfo()#
+    pkg <- info$pkgname#
+    ns <- .getNamespace(as.name(pkg))#
+    if (is.null(ns))#
+        stop("cannot find namespace environment for ", pkg, domain = NA);#
+    dbbase <- file.path(info$libname, pkg, "R", pkg)#
+    lazyLoad(dbbase, ns, filter = function(n) n != ".__NAMESPACE__.")#
+})
+library(lattice)
+lattice(weather)
+latticist(weather)
+library(rattle)
+rattle()
+http://www.ggobi.org/
+library(rattle)
+rattle()
+install.packages("DescribeDisplay")
+library(DescribeDisplay)
+pd <- dd_load("gobi-saved-display-description.R")
+library(rattle)
+rattle()
+libary(rattle)
+library(rattle)
+weatherDS <- new.evn()
+weatherDS <- new.env()
+evalq({})
+evalq({ data >- weather})
+evalq({ data <- weather nobs <- nrow(weather) vars <- -grep('^Date|Location|Risk_'), names(data) form <- formulat(RainTomorrow ~ .) target <- all.vars(form)[1] set.seed(42) train <- sample(nobs, 0.7*nobs)}, weatherDS)
+evalq({ data <- weather nobs <- nrow(weather) vars <- -grep('^Date|Location|Risk_)', names(data) form <- formulat(RainTomorrow ~ .) target <- all.vars(form)[1] set.seed(42) train <- sample(nobs, 0.7*nobs)}, weatherDS)
+evalq({ data <- weather nobs <- nrow(weather) vars <- -grep('^Date|Location|Risk_)', names(data)) form <- formulat(RainTomorrow ~ .) target <- all.vars(form)[1] set.seed(42) train <- sample(nobs, 0.7*nobs)}, weatherDS)
+evalq({ data <- weather nobs <- nrow(weather) vars <- -grep('^Date|Location|Risk_)', names(data)) form <- formula(RainTomorrow ~ .) target <- all.vars(form)[1] set.seed(42) train <- sample(nobs, 0.7*nobs)}, weatherDS)
+evalq({data <- weather) nobs <- nrow(weather) vars <- -grep('^Date|Location|Risk_)', names(data)) form <- formula(RainTomorrow ~ .) target < all.vars(form)[1] set.seed(42) train <- sample(nobs, 0.7*nobs)}, weatherDS)
+evalq({ data <- weather nobs <- nrow(weather) vars <- -grep('^(Date|Location|Risk_)', names(data)) form <- formula(RainTomorrow ~ .) target <- all.vars(form)[1] set.seed(42) train <- sample(nobs, 0.7*nobs) }, weatherDS)
+weatherDS <- new.env()
+evalq({ data <- weather nobs <- nrow(weather) vars <- -grep('^(Date|Location|Risk_)', names(data)) form <- formula(RainTomorrow ~ .) target <- all.vars(form)[1] set.seed(42) train <- sample(nobs, 0.7*nobs) }, weatherDS)
+evalq({     data <- weather     nobs <- nrow(weather)     vars <- -grep('^(Date|Location|RISK_)', names(data))     form <- formula(RainTomorrow ~ .)     target <- all.vars(form)[1]     set.seed(42)     train <- sample(nobs, 0.7*nobs) }, weatherDS)
+evalq({     data <- weather     nobs <- nrow(weather)     vars <- -grep('^(Date|Location|RISK_)', names(data))     form <- formula(RainTomorrow ~ .)     target <- all.vars(form) [1]     set.seed(42)     train <- sample(nobs, 0.7*nobs) }, weatherDS)
+evalq({     data <- weather     nobs <- nrow(weather)     vars <- -grep('^(Date|Location|RISK_) ', names(data))     form <- formula(RainTomorrow ~ .)     target <- all.vars(form) [1]     set.seed(42)     train <- sample(nobs, 0.7*nobs) }, weatherDS)
+help evalq
+? evalq
+evalq({     data <- weather     nobs <- nrow(weather)     vars <- -grep('^(Date|Location|RISK_) ', names(data))     target <- all.vars(form) [1]     set.seed(42)     train <- sample(nobs, 0.7*nobs) }, weatherDS)
+evalq({     data <- weather }, weatherDS)
+ls(en)
+ll(en)
+library(rattle)
+ls(en)
+ls(data)
+ll(data)
+library(rattle)
+rattle()
+weatherDS <- new.env()
+evalq({})
+evalq({     data <- weather     nobs <- nrow(weather)     vars <- -grep('^(Date|Location|RISK_)', names(data))     form <- formula(RainTomorrow ~ .)     target <- all.vars(form) [1] })
+evalq({     data <- weather     nobs <- nrow(weather)     vars <- -grep('^(Date|Location|RISK_)', names(data))     form <- formula(RainTomorrow ~ .)     target <- all.vars(form) [1]     set.seed(42) })
+evalq({     data <- weather     nobs <- nrow(weather)     vars <- -grep('^(Date|Location|RISK_)', names(data))     form <- formula(RainTomorrow ~ .)     target <- all.vars(form) [1]     set.seed(42)     train <- sample(nobs, 0.7*nobs) }, weatherDS)
+library(rattle)
+version
+library("rattle")
+rattle()
+.libPaths()
+rattleInfo()
+update.packages()
+rattle()
+library(rattle)
+crv$rattleUI <- "rattle_macosx.ui"
+rattle()
+library("rattle")
+rattle()
+install.packages("rattle")
+rattleInfo()
+rattle()
+install.packages("rattle")
+library("rattle")
+rattle()
+weatherDS <- new.env()#
+#
+evalq({#
+  require(rattle)#
+  data <- weather#
+  target <- "RainTomorrow"#
+  risk <- "RISK_MM"#
+  inputs <- names(data)[3:22]#
+}, weatherDS)#
+setupDataset(weatherDS)
+crv$rattleUI <- "rattle_macosx.ui"
+rattle()
+setwd(/var/folders/p9/6pfk6h6d2jx88k2dclfktn0r0000gr/T//RtmpHynxRR/)
+setwd(var/folders/p9/6pfk6h6d2jx88k2dclfktn0r0000gr/T//RtmpHynxRR/)
+getwed()
+getwd()
+setwd("var/folders/p9/6pfk6h6d2jx88k2dclfktn0r0000gr/T//RtmpHynxRR/")
+setwd("var/folders/p9/6pfk6h6d2jx88k2dclfktn0r0000gr/T//RtmpHynxRR")
+install.packages("RGtk2")
+library(RGtk2)
+library(rattle)
+crv$rattleUI <- "rattle_macosx.ui"
+rattle()
+library("rattle")
+rattle()
+library("rattle")
+rattle()
+weatherDS(rattle)
+weatherDS <- new.env()
+evalq({})
+evalq({     data <- weather     nobs <- nrow(weather) })
+evalq({     data <- weather     nobs <- nrow(weather)     vars <- -grep('^(Date|Location|RISK_)', names(data))     form <- formula(RainTomorrow ~ .)     target <- all.vars(form)[]     set.seed(42)     train <- sample(nobs, 0.7*nobs) }, weatherDS)
+evalq({     data <- weather     nobs <- nrow(weather)     vars <- -grep('^(Date|Location|RISK_)', names(data))     form <- formula(RainTomorrow ~ .)     target <- all.vars(form)[1]     set.seed(42)     train <- sample(nobs, 0.7*nobs) }, weatherDS)
+library(rpart)
+weatherBRP <- new.env()
+evalq({})
+evalq({     data <- weather     vars <- -grep('^(Date|Location|RISK_)', names(data))     target <- "RainTomorrow"     N <- nrow(data)     M <- ncol(data) - length(vars)     data$Target <- rep(-1, N)     data$Target[data[target] == "Yes"]     vars <- c(vars, -(ncol(data)-1)) # Remove old target     form <- formula(Target ~ .)     target <- all.vars(form)[1] }, weatherBRP)
+? evalq
+head(weatherBRP$data[c("RainTomorrow", "Target")])
+ls weather
+weather
+-grep('^(Date|Location|RISK_)', names(data))
+"RainTomorrow"
+nrow(data)
+new.env()
+weather
+formula(Target ~ .)
+all.vars(form)[1]
+form
+form <- formula(RainTomorrow ~ .)
+form
+all.vars(form)[1]
+form <- formula(Target ~ .)
+form
+target <- all.vars(form)[1]
+target
+evalq({     data <- weather     vars <- -grep('^(Date|Location|RISK_)', names(data))     target <- "RainTomorrow"     N <- nrow(data)     M <- ncol(data) - length(vars)     data$Target <- rep(-1, N)     data$Target[data[target] == "Yes"]     vars <- c(vars, -(ncol(data)-1)) # Remove old target     form <- formula(Target ~ .)     target <- all.vars(form)[1] }, weatherBRP)
+swirl
+getwd()
+getwd()
+cd water
+cd /water
+cd
+cd "water"
+setwd("~/water")
+getwd()
+ls
+-git init
+git init
+q()
