@@ -1,0 +1,9 @@
+CREATE TABLE `io_forecast` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `call_sign` varchar(3) NOT NULL DEFAULT '',
+  `collection_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `forecast_time` timestamp NULL DEFAULT NULL,
+  `precip_intensity` decimal(10,0) DEFAULT NULL,
+  `precip_type` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=393 DEFAULT CHARSET=latin1;
