@@ -1,8 +1,7 @@
-water
-=====
+# Chicago OpenWater Project
+#### An open-source, open-data look at Chicago's water resources
+---
+This repo is part an ongoing project of Chicago's [OpenGov Hack Night](http://opengovhacknight.org/)
 
-Projects for the water team of OpenGov Hack Night http://opengovhacknight.org/
-
-JavaCrons
-=========
+###JavaCrons
 This project is for Java-based cronjobs that fill up our database
