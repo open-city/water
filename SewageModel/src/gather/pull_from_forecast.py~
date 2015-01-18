@@ -1,0 +1,19 @@
+import requests
+import csv
+
+
+with open('eggs.csv', 'wb') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=' ',
+                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
+    spamwriter.writerow(['Spam'] * 5 + ['Baked Beans'])
+    spamwriter.writerow(['Spam', 'Lovely Spam', 'Wonderful Spam'])
+q = requests.get('https://api.forecast.io/forecast/cca824ca4656719ca90c104fabf03aa0/41.995,-87.9336,2007-01-01T00:00:00')
+
+hourly_data = q.json()['hourly']
+for hourly_datum in hourly_data:
+    
+
+    
+#['data'][0]['precipIntensity']
+
+
