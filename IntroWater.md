@@ -23,4 +23,10 @@ Create a singular data resource for information about water resources in Chicago
 
 
 
+Acronyms
+========
 
+* CSO: combiner sewer overflow
+* FOIA: Freedom of Information Act
+* MWRD: Metropolitan Water Reclamation District of Greater Chicago
+* TARP: Tunnel and Reservoir Plan
