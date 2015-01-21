@@ -8,14 +8,72 @@
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.1/cerulean/bootstrap.min.css" rel="stylesheet">
         <link href="webpage/openwater.css" rel="stylesheet">
 
     </head>
     <body>
-        <div class="container">
-            <h1 class="centerThis">Open Waters Chicago</h1>
-            <h5 class="centerThis">An open-source, open-data look at Chicago water</h5>
+
+        <style>
+
+            .jumbotron {
+                background-image:url("webpage/skyline_water.jpeg");
+                background-size:cover;
+                height:500px;
+                color: white;
+            }
+
+            #jumboText {
+                position: relative;
+                top: 250px;
+                color:white;
+            }
+
+            #jumboText h2 {
+                color: white;
+            }
+
+            .centerThis {
+                text-align: center;
+            }
+
+        </style>
+
+        <div class="jumbotron" id="heroImage">
+            <div id="jumboText">
+                <div class="container">
+                    <div class="col-xs-12 col-sm-offset-2">
+                        <h2>Open Waters Chicago</h2>
+                        <p>A data-driven conversation about Chicago's water resources</p>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
+
+        <div class="container">
+            <h2 class="centerThis">
+                Learn more<br>
+            </h2>
+            <div class="col-sm-4">
+                Test
+            </div>
+            <div class="col-sm-4">
+                Test
+            </div>
+            <div class="col-sm-4">
+                Test
+            </div>
+
+        </div>
+
+        <hr>
+        <h3 class="centerThis">
+            Open Waters Chicago is a community of residents who are interested in
+            telling the story of our local water environment using data.
+        </h3>
+
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
