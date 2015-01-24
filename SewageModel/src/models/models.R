@@ -7,7 +7,7 @@ require(doMC)
 registerDoMC(cores=5)
 
 
-setwd("~/Dropbox/CivicHack/Water")
+setwd("SewageModel")
 sewage_data <- readRDS("./data/derived/munged_data.RDS")
 precip_data <- readRDS("./data/derived/transformed_precip.RDS")
 
