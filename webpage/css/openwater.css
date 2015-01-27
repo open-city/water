@@ -1,0 +1,28 @@
+.jumbotron {
+    background-size:cover;
+    height:500px;
+    color: white;
+}
+
+#jumboText {
+    position: relative;
+    top: 250px;
+    color:white;
+}
+
+#jumboText h2 {
+    color: white;
+}
+
+.centerThis {
+    text-align: center;
+}
+
+.blueBackground {
+    background-color: #317eac;
+    color: white;
+}
+
+.blueBackground h2 {
+    color:white;
+}
