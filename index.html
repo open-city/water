@@ -118,7 +118,7 @@
                             <input type="email" class="form-control" id="emailInput" placeholder="Join our e-mail list.  No spam here.">
                         </div>
                         <div class="col-sm-4">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button class="btn btn-primary" id="joinListBtn">Submit</button>
                         </div>
                     </div>
 
@@ -131,9 +131,16 @@
         </div>
 
 
+
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+        <script>
+            $('#joinListBtn').on('click', function () {
+                alert("Um...sorry, but this button doesn't do anything yet.  Stay Tuned ;");
+            })
+        </script>
     </body>
 </html>
