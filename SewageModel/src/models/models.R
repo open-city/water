@@ -60,6 +60,8 @@ full_glm <- glm.fit(big_predictor_matrix, outcome, family=binomial(link = "logit
 wzl <- glmnet(predictor_matrix, outcome, alpha=0.5, family="binomial")
 wzl <- cv.glmnet(big_predictor_matrix, outcome, alpha=0.5, family="binomial", parallel=TRUE)
 
+# At this point, the variable wzl can be visualized with plot(wzl).
+
 #quit()
 #
 #wzl <- cv.glmnet(as.matrix(predictors), outcome, alpha=0.5, family="binomial")
