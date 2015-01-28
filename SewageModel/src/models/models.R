@@ -31,6 +31,8 @@ precip_ins_to_use <- 1:10
 precip_ins_to_use <- c(1:192, 230:256)
 precip_ins_to_use <- c(1:65, 230:256)
 
+#precip_ins_to_use <- 1:5
+
 predictors <- precip_data
 predictors[["month"]] <- factor(sapply(as.character(sewage_data[["start"]]), function(x) strsplit(x, "-")[[1]][2]))
 the_months <- as.numeric((sapply(as.character(sewage_data[["start"]]), function(x) strsplit(x, "-")[[1]][2])))
