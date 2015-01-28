@@ -5,11 +5,23 @@ d3.csv("data/beachClosings.csv", function(error, inputData) {
         closings_by_beach[d.BeachName] = closings_by_beach[d.BeachName] + 1 || 1;
     });
 
-    drawChart(closings_by_beach);
+    var beaches = sortObject(closings_by_beach);
+
+    
+
+    drawChart(beaches);
 
 });
 
-function drawChart(closings_by_beach) {
+function drawChart(beaches) {
+    
+    var beachNames = [];
+    var closings = [];
+    
+    beaches.forEach(function(b) {
+        beachNames.push(b.name);
+        closings.push(b.closings);
+    });
 
     $('#beachChart').highcharts({
         chart: {
@@ -20,8 +32,8 @@ function drawChart(closings_by_beach) {
             text: 'Chicago Beach Closings, 2014'
         },
         xAxis: {
-            categories: Object.keys(closings_by_beach),
-            title: {
+            categories: beachNames,
+             title: {
                 text: "Beaches"
             },
             labels: {
@@ -55,7 +67,23 @@ function drawChart(closings_by_beach) {
             enabled: false
         },
         series: [{
-            data: Object.keys(closings_by_beach).map(function(key){return closings_by_beach[key]})
+            data: closings
         }]
     });
+}
+
+function sortObject(obj) {
+    var arr = [];
+    for (var prop in obj) {
+        if (obj.hasOwnProperty(prop)) {
+            arr.push({
+                'name': prop,
+                'closings': obj[prop]
+            });
+        }
+    }
+    arr.sort(function(a, b) { return b.closings - a.closings; });
+    //arr.sort(function(a, b) { a.value.toLowerCase().localeCompare(b.value.toLowerCase()); }); //use this to sort as strings
+    
+    return arr; // returns array
 }
