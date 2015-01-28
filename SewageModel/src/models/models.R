@@ -13,7 +13,7 @@ setwd("SewageModel")
 sewage_data <- readRDS("./data/derived/munged_data.RDS")
 precip_data <- readRDS("./data/derived/transformed_precip.RDS")
 
-segment_names <- c("segment_1",  "segment_11", "segment_12", "segment_13", 
+segment_names <- c("segment_1",  "segment_11", "segment_12", "segment_13",
                    "segment_14", "segment_15", "segment_16", "segment_17",
                    "segment_18", "segment_19", "segment_2",  "segment_20",
                    "segment_21", "segment_23", "segment_3",  "segment_30",
