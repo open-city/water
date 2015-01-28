@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 library(gbm)
 library(pROC)
 library(glmnet)
