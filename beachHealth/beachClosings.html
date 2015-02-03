@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html> 
+    <head>
+        <title>Beach Closings</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    </head>
+    <body>
+        
+        <div class="container">
+        
+
+        <div ng-app="myapp">
+            <div ng-controller="myctrl" id="controllerId">
+                <div class="row">
+                </div>
+                
+                <input ng-model="highchartsNG.title.text">
+                <button ng-click="showClosingsByDate()">Show Closings By Date</button>
+                <button ng-click="showClosingsByBeach()">Show Closings By Beach</button>
+                <button ng-click="swapChartType()">Line/Bar</button>
+                <highchart id="chart1" config="highchartsNG"></highchart>
+            </div>
+        </div>
+        </div>
+
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="http://code.highcharts.com/modules/data.js"></script>
+        <script src="https://rawgit.com/pablojim/highcharts-ng/master/dist/highcharts-ng.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="beachClosings.js"></script>
+        <script src="closingApp.js"></script>
+
+    </body>
+</html>

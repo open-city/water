@@ -1,23 +1,38 @@
-var closings_by_beach = {};
+d3.csv("data/beachClosings.csv", function(error, beachClosings) {
 
-d3.csv("data/beachClosings.csv", function(error, inputData) {
-    inputData.forEach(function(d) {
-        closings_by_beach[d.BeachName] = closings_by_beach[d.BeachName] + 1 || 1;
-    });
+    beachClosings.getByNumClosings = new function() {
+        var closingsByBeach = {};
+        beachClosings.forEach(function(d) {
+            var thisBeachName = d.beachName;
+            closingsByBeach[thisBeachName] = closingsByBeach[thisBeachName] + 1 || 1;
+        });
 
-    var beaches = sortObject(closings_by_beach);
+        var afterSort = sortObject(closingsByBeach);
 
-    
+        return afterSort
+    }
 
-    drawChart(beaches);
+    beachClosings.getByDate = new function() {
+        var closingsByDate = {};
+        beachClosings.forEach(function(d) {
+            var thisDate = d.closedDate;
+            closingsByDate[thisDate] = closingsByDate[thisDate] + 1 || 1;
+        });
+
+        var afterSort = sortObject(closingsByDate);
+
+        return afterSort
+    }
+
+    drawChart(beachClosings.getByDate);
 
 });
 
 function drawChart(beaches) {
-    
+
     var beachNames = [];
     var closings = [];
-    
+
     beaches.forEach(function(b) {
         beachNames.push(b.name);
         closings.push(b.closings);
@@ -33,7 +48,7 @@ function drawChart(beaches) {
         },
         xAxis: {
             categories: beachNames,
-             title: {
+            title: {
                 text: "Beaches"
             },
             labels: {
@@ -84,6 +99,6 @@ function sortObject(obj) {
     }
     arr.sort(function(a, b) { return b.closings - a.closings; });
     //arr.sort(function(a, b) { a.value.toLowerCase().localeCompare(b.value.toLowerCase()); }); //use this to sort as strings
-    
+
     return arr; // returns array
 }
