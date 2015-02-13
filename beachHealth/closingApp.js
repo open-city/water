@@ -16,7 +16,7 @@ myapp.controller('myctrl', function ($scope) {
         })
 
         $scope.highchartsNG.xAxis.categories = thekeys;
-        
+
         $scope.highchartsNG.title.text = "Beach Closings By Beach";
 
     }
@@ -26,15 +26,31 @@ myapp.controller('myctrl', function ($scope) {
         var closings = beachClosings.getByDate;
         $scope.removeCurrentSeries();
 
-        var rnd = Object.keys(closings).map(function(key){return closings[key]})
+        var theValues = Object.keys(closings).map(function(key){return closings[key]})
         var thekeys = Object.keys(closings);
+        
+        var rnd = [];
+        for(var i = 0; i < theKeys.length; i++){
+            rnd.push({theKeys[i], theValues[i]});
+        }
+
+        $scope.highchartsNG.options = {
+            type: 'spline'
+        }
 
         $scope.highchartsNG.series.push({
             data: rnd
         })
 
-        $scope.highchartsNG.xAxis.categories = thekeys;
-        
+        $scope.highchartsNG.xAxis = {
+
+            type: 'datetime',
+            dateTimeLabelFormats: { // don't display the dummy year
+                month: '%e. %b',
+                year: '%b'
+            }
+        };
+
         $scope.highchartsNG.title.text = "Beach Closings By Date";
 
     }

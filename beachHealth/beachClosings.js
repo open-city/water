@@ -1,8 +1,15 @@
-var beachClosings;
+var beachClosings = [];
 
 d3.csv("data/beachClosings.csv", function(error, d) {
     
-    beachClosings = d;
+    d.forEach(function(bc) {
+        var beachClosing = {
+            beachName: bc.beachName,
+            closedDate: new Date(bc.closedDate)
+        }
+        beachClosings.push(beachClosing);
+    });
+    
 
     beachClosings.getByNumClosings = new function() {
         var closingsByBeach = {};
@@ -21,7 +28,7 @@ d3.csv("data/beachClosings.csv", function(error, d) {
             closingsByDate[thisDate] = closingsByDate[thisDate] + 1 || 1;
         });
 
-        return sortClosings(closingsByDate);
+        return closingsByDate;
     }
         
     angular.element(document.getElementById('controllerId')).scope().showClosingsByBeach();
