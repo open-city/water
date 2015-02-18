@@ -39,30 +39,67 @@
             <div class="container">
 
                 <h2 class="centerThis">
-                    Our beaches represent our most tangible connection to Lake Michigan.
-                    Given that our drinking water also comes from only a mile out,
-                    <strong>the health of the beaches influence our health</strong>
+                    As a source of drinking water and leisure, the health of our beaches
+                    is indicator as our health as Chicagoans.
                 </h2>
             </div>
-
         </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+        <div class="theCharts">
 
-        <div class="container">
+            <div id="byBeach">
+                <div ng-app="byBeachApp">
+                    <div ng-controller="byBeachCtrl" id="controllerId">
 
-            <div ng-app="beachClosingsApp">
-                <div ng-controller="beachController">
-                    <div class="row">
-                        <button type="button" ng-click="addSeries()" class="btn btn-primary">Primary</button>
-                    </div>
-                    <div class="row">
-                        <highchart id="chart1" config="highchartsNG"></highchart>
+                        <button ng-click="ascendingByBeach()">Ascending</button>
+                        <button ng-click="descendingByBeach()">Descending</button>
+                        <highchart id="byBeachChart" config="byBeachNG"></highchart>
                     </div>
                 </div>
             </div>
+            <div id="byMonth"></div>
+            <div id="byDate"></div>
 
         </div>
+
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+
+        <script>
+            var closingsByBeach = {};
+            var closingsByMonth = {};
+            var closingsByDate = {};
+
+            d3.csv("data/beachClosings.csv", function(error, beachClosings) {
+
+                beachClosings.forEach(function(d) {
+
+                    closingsByBeach[d.beachName] = closingsByBeach[d.beachName] + 1 || 1;
+                    closingsByDate[d.closedDate] = closingsByDate[d.closedDate] + 1 || 1;
+                    var dateSplit = d.closedDate.split("-");
+                    closingsByMonth[dateSplit[1]] = closingsByMonth[dateSplit[1]] + 1 || 1;
+                });
+                
+                    angular.element(document.getElementById('controllerId')).scope().ascendingByBeach();
+    angular.element(document.getElementById('controllerId')).scope().$apply();
+
+            });
+
+        </script>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+        <script>alert("1");</script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+
+        <script src="http://code.highcharts.com/modules/data.js"></script>
+        <script src="https://rawgit.com/pablojim/highcharts-ng/master/dist/highcharts-ng.js"></script>
+        
+        <script src="js/byBeachChart.js"></script>
+        <script>alert("2");</script>
+
         <hr>
         <div class="container">
             <h2>The main cause for closures is Ecoli</h2>
@@ -71,17 +108,6 @@
             <h6>2. Seagulls - clean up your trash, beach cleanup</h6>
             <h6>3. Combined Sewer Overflows -- follow this link</h6>       
         </div>
-
-        <script src="http://d3js.org/d3.v3.min.js"></script>
-
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-        <script src="http://code.highcharts.com/highcharts.js"></script>
-        <script src="http://code.highcharts.com/modules/data.js"></script>
-        <script src="https://rawgit.com/pablojim/highcharts-ng/master/dist/highcharts-ng.js"></script>
-        <script src="../webpage/js/closingsChart2.js"></script>
 
 
         <script>
