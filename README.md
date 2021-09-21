@@ -11,3 +11,24 @@ Files associated with our webpages spawned from the above URL
 
 ###JavaCrons
 This project is for Java-based cronjobs that fill up our database
+
+
+Combined Sewage Overflow (CSO) forecasting
+==========================================
+
+Dependencies:
+
+* R
+
+R packages:
+
+* doMC
+* gbm
+* glmnet
+* gplots
+* pROC
+
+To run:
+
+	cd path/to/water
+	make model
